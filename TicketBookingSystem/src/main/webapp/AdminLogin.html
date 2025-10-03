@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f44336; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .form-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 300px;
+    }
+
+    h1 { 
+        text-align: center; 
+        color: #b71c1c; 
+        margin-bottom: 20px; 
+    }
+
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; color: #333; }
+    .form-group .form-control {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background: #b71c1c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .btn:hover { background: #7f0000; }
+</style>
+</head>
+<body>
+    <form class="form-card" action="adminLogin" method="post">
+        <h1>Admin Login</h1>
+        
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="email" name="em" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type="password" name="pass" required>
+        </div>
+
+        <input class="btn" type="submit" value="POST">
+    </form>
+</body>
+</html>

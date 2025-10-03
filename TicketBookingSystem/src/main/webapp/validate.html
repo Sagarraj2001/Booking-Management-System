@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Panel</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .form-card {
+        background: #fff;
+        padding: 30px 35px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 350px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background: #00796b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background: #004d40;
+    }
+
+    a {
+        color: #00796b;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+    <form class="form-card" action="adminTicket" method="post">
+        <h1>Admin Panel - Approve/Reject Ticket</h1>
+
+        <div class="form-group">
+            <label>Ticket ID</label>
+            <input type="text" name="ticket_id" required>
+        </div>
+
+        <div class="form-group">
+            <label>Action</label>
+            <select name="action">
+                <option value="APPROVED">Approve</option>
+                <option value="REJECTED">Reject</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit">
+
+        <p><a href="show" target="_blank">View All User Tickets</a></p>
+    </form>
+</body>
+</html>

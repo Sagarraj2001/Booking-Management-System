@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Check Ticket Status</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f4f8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.ticket-form {
+	background-color: #fff;
+	padding: 30px 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 300px;
+}
+
+.ticket-form h1 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+	font-size: 22px;
+}
+
+.ticket-input {
+	width: 100%;
+	padding: 8px 10px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.ticket-submit {
+	width: 100%;
+	padding: 10px;
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.ticket-submit:hover {
+	background-color: #45a049;
+}
+</style>
+</head>
+<body>
+	<form class="ticket-form" action="checkStatus" method="post">
+		<h1>Check Your Ticket Status</h1>
+
+		<label>Enter Ticket ID:</label> <input class="ticket-input"
+			type="text" name="ticket_id" required> <label>Enter
+			Your Contact No:</label> <input class="ticket-input" type="tel" name="co"
+			pattern="[6-9]{1}[0-9]{9}"
+			title="Indian mobile numbers start with 6, 7, 8, or 9 and must be 10 digits long."
+			required> <input class="ticket-submit" type="submit"
+			value="Check Status">
+	</form>
+</body>
+</html>

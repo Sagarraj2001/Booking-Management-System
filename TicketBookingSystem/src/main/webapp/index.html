@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Booking System</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #e0f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .form-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 350px;
+    }
+
+    h1 { text-align: center; color: #00796b; margin-bottom: 20px; }
+
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; color: #333; }
+    .form-group .form-control {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .form-group textarea { resize: vertical; height: 60px; }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background: #00796b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .btn:hover { background: #004d40; }
+
+    a { color: #00796b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    p { text-align: center; margin-top: 10px; }
+</style>
+</head>
+<body>
+    <form class="form-card" action="ticket" method="post">
+        <h1>Booking System</h1>
+        
+        <div class="form-group">
+            <label>First Name</label>
+            <input class="form-control" type="text" name="fn" required>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input class="form-control" type="text" name="lm" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="email" name="em" required>
+        </div>
+        <div class="form-group">
+            <label>Contact No</label>
+            <input class="form-control" type="tel" name="co" pattern="[6-9]{1}[0-9]{9}" 
+                   title="Indian mobile numbers start with 6,7,8,9 and must be 10 digits long." 
+                   required>
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <textarea class="form-control" name="add" required></textarea>
+        </div>
+
+        <input class="btn" type="submit" value="POST">
+
+        <p><a href="AdminLogin.html">Admin Login</a></p>
+        <p><a href="checkStatus.html">Check Ticket Status</a></p>
+    </form>
+</body>
+</html>
